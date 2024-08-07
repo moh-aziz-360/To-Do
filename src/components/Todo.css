@@ -1,0 +1,155 @@
+/* General styles for todo-page */
+.todo-page {
+  background: url("../assets/todos.png") no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Berkshire Swash", sans-serif;
+  overflow: hidden;
+}
+
+/* Styles for the todo-container */
+.todo-container {
+  width: 50%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  background-color: rgba(189, 126, 126, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Needed for absolute positioning of the logout button */
+}
+
+/* Styles for logout button */
+.logout-button {
+  padding: 8px 16px;
+  background-color: #ff5722; /* New appealing color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: #e64a19;
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Styles for form */
+.todo-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 12px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todo-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.todo-form button {
+  padding: 12px 20px;
+  background-color: #28a745; /* New appealing color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.todo-form button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* Styles for todo list */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd; /* Border around each todo item */
+  border-radius: 5px; /* Rounded corners for items */
+}
+
+.todo-item:last-child {
+  margin-bottom: 0; /* No margin for the last item */
+}
+
+.todo-item span {
+  flex: 1;
+  font-size: 18px;
+}
+
+/* Wrapper for buttons to align them horizontally */
+.todo-item-buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.todo-item-buttons button {
+  padding: 6px 12px;
+  background-color: #007bff; /* New appealing color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.todo-item-buttons button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.todo-item button.edit-button {
+  background-color: #ffc107;
+}
+
+.todo-item button.edit-button:hover {
+  background-color: #e0a800;
+}
+
+h1 {
+  position: absolute;
+  top: 20px;
+  color: #091b24;
+  border: 1px solid transparent;
+  background-color: rgba(189, 126, 126, 0.85);
+  border-radius: 20px;
+  border-width: 20px;
+}
